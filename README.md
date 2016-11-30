@@ -1,4 +1,7 @@
 # build-scripts-of-ffmpeg-x264-with-android-ndk
+
+[TOC]
+
 ffmpeg build scripts with android ndk (including x264) in **Ubuntu 16.04LTS 64bit / Linux 4.4.0-47-generic**
 
 ## 1. Download x264 and ffmpeg
