@@ -1,6 +1,21 @@
 # build-scripts-of-ffmpeg-x264-with-android-ndk
 
-[TOC]
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [build-scripts-of-ffmpeg-x264-with-android-ndk](#build-scripts-of-ffmpeg-x264-with-android-ndk)
+    - [1. Download x264 and ffmpeg](#1-download-x264-and-ffmpeg)
+    - [2. Setup envirnment](#2-setup-envirnment)
+    - [3. Download build scripts](#3-download-build-scripts)
+    - [4. Compile x264](#4-compile-x264)
+        - [1. Copy build scripts into x264 folder](#1-copy-build-scripts-into-x264-folder)
+        - [2. Compile](#2-compile)
+        - [3. Result](#3-result)
+    - [4. Compile ffmpeg](#4-compile-ffmpeg)
+        - [1. Copy build scripts into ffmpeg folder](#1-copy-build-scripts-into-ffmpeg-folder)
+        - [2. Compile](#2-compile)
+        - [3. Result](#3-result)
+
+<!-- /TOC -->
 
 ffmpeg build scripts with android ndk (including x264) in **Ubuntu 16.04LTS 64bit / Linux 4.4.0-47-generic**
 
@@ -34,7 +49,7 @@ Those scripts target for different arch, so you can use them as you need. For ex
 ### 3. Result
 Result like this:
 ```shell
-$ tree -f android 
+$ tree -f android
 android
 ├── android/arm
 │   ├── android/arm/bin
