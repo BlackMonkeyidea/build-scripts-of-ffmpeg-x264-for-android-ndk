@@ -1,8 +1,7 @@
 #!/bin/bash
-#Change NDK to your Android NDK location
-NDK=/Users/yesimroy/Library/Android/sdk/ndk-bundle
-PLATFORM=$NDK/platforms/android-18/arch-x86/
-PREBUILT=$NDK/toolchains/x86-4.9/prebuilt/darwin-x86_64
+echo "ANDROID_NDK_HOME is $ANDROID_NDK_HOME"
+PLATFORM=$ANDROID_NDK_HOME/platforms/android-14/arch-x86/
+PREBUILT=$ANDROID_NDK_HOME/toolchains/x86-4.9/prebuilt/linux-x86_64
 PATH_X264=../x264
 
 
@@ -40,6 +39,7 @@ function build_x86
   ${MODULES}
 
   make clean
+  find ./compat -name 'strtod.[d|o]' -exec rm {} \;
   make
   make install
 }

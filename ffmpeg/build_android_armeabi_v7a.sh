@@ -1,8 +1,7 @@
 #!/bin/bash
-#Change NDK to your Android NDK location
-NDK=/Users/yesimroy/Library/Android/sdk/ndk-bundle
-PLATFORM=$NDK/platforms/android-18/arch-arm/
-PREBUILT=$NDK/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64
+echo "ANDROID_NDK_HOME is $ANDROID_NDK_HOME"
+PLATFORM=$ANDROID_NDK_HOME/platforms/android-14/arch-arm/
+PREBUILT=$ANDROID_NDK_HOME/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64
 
 GENERAL="\
 --enable-small \
@@ -37,6 +36,7 @@ function build_ARMv7
   --enable-neon
 
   make clean
+  find ./compat -name 'strtod.[d|o]' -exec rm {} \;
   make
   make install
 }
